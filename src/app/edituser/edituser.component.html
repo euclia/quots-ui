@@ -1,0 +1,43 @@
+
+<div *ngIf="user">
+  <h3 class="userid">User ID: {{user.id}}</h3>
+  <h4 class="useremail">User email: {{user.email}}</h4>
+  <h4 class="userusername">Username: {{user.username}}</h4>
+
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Add credits" (keyup)="onCreditsInput($event)" [(ngModel)]="addCredits" [ngModelOptions]="{standalone: true}">
+      <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="addCreditsB()" matTooltip="Add usage type">
+        <mat-icon>add</mat-icon>
+    </button>
+    </mat-form-field>
+  </form>
+
+  <h3 class="usercredits">User's Credits:  {{user.credits}}  </h3>
+
+
+  <button mat-raised-button color="primary" matSuffix aria-label="Clear" [disabled]="savebutton" (click)="cancel()" matTooltip="Cancel changes" class="cancel-b">
+    <mat-icon>cancel</mat-icon>
+  </button>
+  <button mat-raised-button color="accent" matSuffix aria-label="Clear" [disabled]="savebutton" (click)="saveUser()" matTooltip="Save changes" class="save-b">
+    <mat-icon>save</mat-icon>
+  </button>
+
+  <div *ngIf="user.spenton" >
+      <h5 class="creditssph">Credits have been spended on </h5>
+      <div *ngFor="let spenton of user.spenton" class="spendedon">
+        <h5>App:  {{spenton.appid}} </h5>
+          <div *ngFor="let sp of spenton.usage | keyvalue">
+            <!-- <div *ngFor="let sp of item | keyvalue"> -->
+                Usage: <b>{{sp.key}}</b> , Credits spended: <b>{{sp.value}}</b>
+            <!-- </div> -->
+          </div>
+      </div>
+  </div>
+
+</div>
+
+
+
+
+

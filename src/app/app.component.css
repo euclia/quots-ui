@@ -1,0 +1,89 @@
+.main-toolbar{
+    overflow: hidden;
+    position: sticky;
+    align-items: center;
+    -webkit-box-align: center;  
+    box-shadow: 0px 0px 10px black;
+    top: 0;
+    overflow: hidden;
+    height: 54px;
+    z-index: 1;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.quots-icon{
+    margin-left: 1em;
+    color: primary;
+}
+
+.quots-icon{
+    color: primary;
+}
+
+.content{
+    height: calc(100vh - 54px);
+}
+
+.header{
+    margin: 1em;
+}
+
+.login-butt{
+    width: 3em;
+    height: 3em;
+}
+
+.container{
+    height: calc(100vh - 54px);
+    z-index: 0;
+}
+
+.drawer{
+    width: 160px;
+}
+
+.login-fields{
+    width:400px;
+}
+
+/* .login-container {
+    /* height: calc(100vh - 54px);
+}  */
+
+.login-card{
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 16em; */
+    margin-left: 12em;
+    padding: 2em;
+}
+
+.empty{
+    height:14em;
+}
+
+  
+  /* .login-container > * {
+    width: 100%;
+  } */
+  
+  .login-right-align {
+    text-align: right;
+  }
+  
+  input.login-right-align::-webkit-outer-spin-button,
+  input.login-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.login-right-align {
+    -moz-appearance: textfield;
+  }
+
+.appsbutton{
+    width: 100%;
+    margin-top: 2em;
+}

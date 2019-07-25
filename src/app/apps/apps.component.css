@@ -1,0 +1,25 @@
+.apps_table {
+    width: -webkit-fill-available;
+    
+}
+
+.aph{
+    margin-left: 5em;
+    margin-top: 2em;
+    width: 20%;
+    float: left;
+}
+
+.addb{
+    margin-top: 1.4em;
+    float: right;
+    margin-right: 5em;
+}
+
+table {
+    width: 100%;
+}
+
+.all{
+    margin: 5em;
+}

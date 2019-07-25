@@ -1,0 +1,87 @@
+<div *ngIf="app">
+  <h3 class="appid">App ID: {{app.id}}</h3>
+
+  <div class="appenable">
+      <mat-slide-toggle
+      class="example-margin"
+      [color]="accent"
+      [checked]="app.enabled">
+      Enabled
+    </mat-slide-toggle>
+  </div>
+
+  <div class="appsecret">
+      <h4>Applications secret:  {{app.clientsecret}} </h4>
+      <button mat-raised-button color="warning" (click)="regenerateSecret()" matTooltip="Regenerate secret" class="regenerate">
+        <mat-icon>cached</mat-icon>
+    </button>
+  </div>
+
+  <!-- <form class="example-form baseurls mat-elevation-z2">
+    <h5>Application base urls</h5>
+    <div *ngFor="let url of app.baseURLS">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Available url" value={{url}} (keyup)="onUrlInput($event)">
+            <button mat-button *ngIf="url; else input" matSuffix mat-icon-button aria-label="Clear" (click)="deleteURL(url)" matTooltip="Delete URL">
+                <mat-icon>close</mat-icon>
+            </button>
+            <ng-template  #input>
+                <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="addURL()" matTooltip="Enable URL">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </ng-template>
+          </mat-form-field>
+    </div>
+    <button mat-icon-button color="accent" (click)="addBaseUrl()" [disabled]="addDisabled" matTooltip="Add BaseURL">
+        <mat-icon>add</mat-icon>
+    </button>
+
+    </form> -->
+
+    <form class="usages-form usages mat-elevation-z2">
+        <h5>Application usages and costs</h5>
+        <div *ngFor="let usage of app.usagetypes">
+          <div *ngIf="usage.length > 0; else usagetype">
+              <mat-form-field class="example-full-width">
+                  <input matInput placeholder="{{usage}} cost" value={{app.usagescost[usage]}} (keyup)="onUsageCostInput($event, usage)">
+                  <button mat-button *ngIf="usage; else input" matSuffix mat-icon-button aria-label="Clear" (click)="deleteUsage(usage)" matTooltip="Delete usage">
+                      <mat-icon>close</mat-icon>
+                  </button>
+                  <ng-template  #input>
+                      <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="addUsage()" matTooltip="Enable URL">
+                          <mat-icon>add</mat-icon>
+                      </button>
+                  </ng-template>
+                </mat-form-field>
+          </div>
+          <ng-template #usagetype>
+              <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Usage type" value={{usage}} (keyup)="onUsageTypeInput($event)">
+                  <button mat-button *ngIf="usage; else input" matSuffix mat-icon-button aria-label="Clear" (click)="deleteUsage(usage)" matTooltip="Delete URL">
+                      <mat-icon>close</mat-icon>
+                  </button>
+                  <ng-template  #input>
+                      <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="addUsageType()" matTooltip="Add usage type">
+                          <mat-icon>add</mat-icon>
+                      </button>
+                  </ng-template>
+                </mat-form-field>
+          </ng-template>
+        </div>
+        <button mat-icon-button color="accent" (click)="addUsage()" matTooltip="Add Usage">
+            <mat-icon>add</mat-icon>
+        </button>
+        </form>
+
+        <button mat-raised-button color="accent" matSuffix aria-label="Clear"  (click)="deleteApp()" matTooltip="Delete app" class="delete-b">
+            <mat-icon>delete</mat-icon>
+        </button>
+        <button mat-raised-button color="accent" matSuffix aria-label="Clear" [disabled]="savebutton" (click)="saveApp()" matTooltip="Save changes" class="save-b">
+            <mat-icon>save</mat-icon>
+        </button>
+
+
+
+</div>
+
+

@@ -1,0 +1,46 @@
+.userid{
+    margin-left: 2em;
+    margin-top: 2em; 
+}
+.useremail{
+    margin-left: 2.35em;
+    margin-top: 1em; 
+}
+
+.userusername{
+    margin-left: 2.35em;
+    margin-top: 1em; 
+}
+
+.usercredits{
+    margin-left: 2em;
+    margin-top: 1em; 
+    margin-bottom: 1em;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin-left: 2.5em;
+  }
+  
+.example-full-width {
+    width: 100%;
+}
+
+.save-b{
+    margin-left: 1em;
+}
+
+.cancel-b{
+    margin-left: 400px;
+}
+
+.creditssph{
+    margin-left: 2.35em;
+}
+
+.spendedon{
+    margin-left: 2em;
+}

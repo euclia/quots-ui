@@ -1,0 +1,12 @@
+.errorall{
+    height: 180px;
+    width: 400px;
+    text-align: center;
+}
+
+.centerit{
+    width: 100%;
+    margin-top: 1em;
+    display: inline-table;
+    vertical-align: middle;
+}

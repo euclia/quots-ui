@@ -1,0 +1,17 @@
+
+<h4 class="addapph">Add application</h4>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="App id" [(ngModel)]='appid' [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+
+    <!-- <mat-form-field class="example-full-width">
+      <input matInput placeholder="Base URL" [(ngModel)]='baseurl' [ngModelOptions]="{standalone: true}">
+    </mat-form-field> -->
+
+    <mat-slide-toggle class="example-margin" [checked]="enabled">
+      Enabled
+    </mat-slide-toggle>
+
+</form>
+<button mat-flat-button [disabled]="!appid" class="addb" (click)="addApp()" color="primary">Add</button>
